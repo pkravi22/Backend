@@ -1,4 +1,4 @@
-# Flowpense Backend
+#  Backend
 
 This is a Node.js backend project using **Prisma ORM** with **PostgreSQL**.  
 It includes models for `User`, `Blog`, `Post`, and `Card`. You can **seed data** and **fetch data** via Express routes.
