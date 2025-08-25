@@ -14,15 +14,15 @@ git clone https://github.com/yourusername/backend_journey.git
 cd backend_journey
 ```
 
-npm install
-DATABASE_URL="postgresql://username:password@localhost:5432/newDb"
-//Replace username, password, and newDb with your PostgreSQL credentials.
+### npm install
+ ### DATABASE_URL="postgresql://username:password@localhost:5432/newDb"
+### //Replace username, password, and newDb with your PostgreSQL credentials.
 
-1. Define your schema
+ ### 1. Define your schema
 
-Check prisma/schema.prisma:
+ ### Check prisma/schema.prisma:
 
-datasource db {
+ datasource db {
 provider = "postgresql"
 url = env("DATABASE_URL")
 }
@@ -46,7 +46,7 @@ Generates Prisma Client.
 
 Create prisma/seed.js:
 
-const { PrismaClient } = require('@prisma/client');
+```const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 async function main() {
@@ -65,7 +65,7 @@ Configure package.json:
 "prisma": {
 "seed": "node prisma/seed.js"
 }
-
+```
 Run the seed script:
 
 npx prisma db seed
