@@ -22,7 +22,7 @@ cd backend_journey
 
  ### Check prisma/schema.prisma:
 
- datasource db {
+``` datasource db {
 provider = "postgresql"
 url = env("DATABASE_URL")
 }
@@ -34,9 +34,9 @@ provider = "prisma-client-js"
 model User { ... }
 model Blog { ... }
 model Post { ... }
-
+```
 2. Run migrations
-   npx prisma migrate dev --name init
+  ``` npx prisma migrate dev --name init ```
 
 Creates tables in your PostgreSQL database.
 
@@ -59,9 +59,9 @@ await prisma.card.create({ ... });
 main()
 .catch(console.error)
 .finally(() => prisma.$disconnect());
-
+```
 Configure package.json:
-
+```
 "prisma": {
 "seed": "node prisma/seed.js"
 }
